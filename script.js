@@ -42,7 +42,7 @@ enterBtn.onclick = () => {
     popup.classList.remove("hidden");
     passwordInput.focus();
 };
-
+ 
 unlockBtn.onclick = () => {
 
     if(passwordInput.value !== PASSWORD){
@@ -112,8 +112,21 @@ function typeMessage(){
 
 }
 
-letterBtn.onclick=()=>{
+const letterScene = document.getElementById("letterScene");
+const envelope = document.querySelector(".envelope");
 
-    alert("💌 The beautiful animated birthday letter is coming in the next update!");
+letterBtn.onclick = () => {
+
+    // Hide the welcome scene
+    welcome.classList.remove("show");
+    welcome.classList.add("hidden");
+
+    // Show the envelope scene
+    letterScene.classList.add("show");
+
+    // Open the envelope after a short delay
+    setTimeout(() => {
+        envelope.classList.add("open");
+    }, 800);
 
 };
