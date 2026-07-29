@@ -206,3 +206,68 @@ font-size:15px;
 color:#ffe0e0;
 font-weight:600;
 }
+/* Welcome Scene */
+
+#welcomeScene{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px;
+background:linear-gradient(135deg,#ff6fa5,#ffb6d9,#fff0f8);
+z-index:5000;
+}
+
+.welcome-content{
+max-width:700px;
+animation:fadeIn 1.2s ease;
+}
+
+#welcomeScene h1{
+font-family:'Great Vibes',cursive;
+font-size:60px;
+color:#fff;
+text-shadow:0 0 15px #ff4d94;
+margin-bottom:20px;
+}
+
+#welcomeScene p{
+font-size:22px;
+color:white;
+line-height:1.8;
+min-height:160px;
+}
+
+#letterBtn{
+margin-top:30px;
+padding:16px 40px;
+font-size:20px;
+border:none;
+border-radius:50px;
+background:#ffffff;
+color:#ff4d94;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+#letterBtn:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px rgba(255,255,255,.8);
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}

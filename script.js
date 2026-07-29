@@ -1,10 +1,10 @@
-// Loading Screen
+// ---------- Loading Screen ----------
 setTimeout(() => {
     document.getElementById("loader").style.display = "none";
     document.getElementById("main").classList.remove("hidden");
 }, 3000);
 
-// Floating Hearts
+// ---------- Floating Hearts ----------
 function createHeart() {
     const heart = document.createElement("div");
 
@@ -13,46 +13,107 @@ function createHeart() {
 
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.animationDuration = (4 + Math.random() * 4) + "s";
-    heart.style.fontSize = (15 + Math.random() * 25) + "px";
+    heart.style.fontSize = (15 + Math.random() * 20) + "px";
 
     document.body.appendChild(heart);
 
-    setTimeout(() => {
-        heart.remove();
-    }, 8000);
+    setTimeout(() => heart.remove(), 8000);
 }
 
 setInterval(createHeart, 400);
 
-// Password Popup
+// ---------- Password ----------
+const PASSWORD = "isha";
+
 const enterBtn = document.getElementById("enterBtn");
 const popup = document.getElementById("passwordScreen");
 const unlockBtn = document.getElementById("unlockBtn");
 const passwordInput = document.getElementById("passwordInput");
 const errorText = document.getElementById("errorText");
 
-// CHANGE THIS PASSWORD TO ANYTHING YOU WANT
-const PASSWORD = "isha";
+const main = document.getElementById("main");
+const welcome = document.getElementById("welcomeScene");
 
-enterBtn.addEventListener("click", () => {
+const title = document.getElementById("typingTitle");
+const text = document.getElementById("typingText");
+const letterBtn = document.getElementById("letterBtn");
+
+enterBtn.onclick = () => {
     popup.classList.remove("hidden");
     passwordInput.focus();
-});
+};
 
-unlockBtn.addEventListener("click", () => {
+unlockBtn.onclick = () => {
 
-    if (passwordInput.value === PASSWORD) {
+    if(passwordInput.value !== PASSWORD){
 
-        popup.classList.add("hidden");
-
-        alert("🎉 Welcome Isha Ji ❤️\n\nYour magical birthday journey begins now!");
-
-    } else {
-
-        errorText.innerHTML = "❌ Wrong password. Try again ❤️";
-
-        passwordInput.value = "";
-
+        errorText.innerHTML="❌ Wrong password ❤️";
+        passwordInput.value="";
+        return;
     }
 
-});
+    popup.classList.add("hidden");
+
+    main.style.display="none";
+
+    welcome.classList.remove("hidden");
+
+    typeStory();
+
+};
+
+// ---------- Typewriter ----------
+const heading="Happy Birthday Isha Ji ❤️";
+
+const message=
+"Today isn't just another day...\\n\\nIt is the day the world became brighter because someone truly special was born.\\n\\nMay your smile always shine and may every dream in your heart come true.";
+
+function typeStory(){
+
+    let i=0;
+
+    const t=setInterval(()=>{
+
+        title.innerHTML=heading.substring(0,i);
+
+        i++;
+
+        if(i>heading.length){
+
+            clearInterval(t);
+
+            typeMessage();
+
+        }
+
+    },80);
+
+}
+
+function typeMessage(){
+
+    let j=0;
+
+    const m=setInterval(()=>{
+
+        text.innerHTML=message.substring(0,j).replace(/\\n/g,"<br>");
+
+        j++;
+
+        if(j>message.length){
+
+            clearInterval(m);
+
+            letterBtn.classList.remove("hidden");
+
+        }
+
+    },30);
+
+}
+
+letterBtn.onclick=()=>{
+
+    alert("💌 The beautiful animated birthday letter is coming in the next update!");
+
+};
