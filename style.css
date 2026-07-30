@@ -350,3 +350,30 @@ transform:rotateX(180deg);
 .envelope.open .letter{
 transform:translateY(-30px);
 }
+#galleryScene {
+    display: none;
+    min-height: 100vh;
+    padding: 30px;
+    text-align: center;
+    overflow-y: auto;
+}
+
+#galleryScene h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.gallery-container {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+}
+
+#galleryImage {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}

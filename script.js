@@ -137,3 +137,15 @@ letterBtn.onclick = () => {
     }, 800);
 
 };
+const galleryBtn = document.getElementById("galleryBtn");
+const galleryScene = document.getElementById("galleryScene");
+
+galleryBtn.onclick = () => {
+
+    letterScene.classList.remove("show");
+    letterScene.style.display = "none";
+
+    galleryScene.classList.remove("hidden");
+    galleryScene.style.display = "block";
+
+};
