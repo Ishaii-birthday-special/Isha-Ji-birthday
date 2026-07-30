@@ -142,6 +142,8 @@ const galleryScene = document.getElementById("galleryScene");
 
 galleryBtn.onclick = () => {
 
+    welcome.style.display = "none";
+
     letterScene.classList.remove("show");
     letterScene.style.display = "none";
 
