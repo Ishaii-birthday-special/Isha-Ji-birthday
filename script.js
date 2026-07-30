@@ -207,3 +207,32 @@ prevBtn.onclick = () => {
     updatePhoto();
 
 };
+const messages = [
+
+    "You are the most special person in my life ❤️",
+
+    "Your smile makes every day brighter 🌸",
+
+    "Thank you for always being there ✨",
+
+    "Happy Birthday, Isha Ji 🎂"
+
+];
+
+function showMessage(index){
+
+    document.getElementById("secretText").innerHTML =
+        messages[index];
+
+}
+const secretBtn = document.getElementById("secretBtn");
+const secretScene = document.getElementById("secretScene");
+
+secretBtn.onclick = () => {
+
+    galleryScene.style.display = "none";
+
+    secretScene.classList.remove("hidden");
+    secretScene.style.display = "block";
+
+};

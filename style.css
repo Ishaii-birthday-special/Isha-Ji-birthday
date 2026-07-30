@@ -377,3 +377,51 @@ transform:translateY(-30px);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
+/* Secret Messages */
+
+#secretScene{
+    min-height:100vh;
+    padding:40px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#ff6fa5,#ffb6d9,#fff0f8);
+}
+
+#secretScene h1{
+    color:white;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.heart-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    max-width:300px;
+    margin:0 auto;
+}
+
+.secret-heart{
+    font-size:60px;
+    padding:20px;
+    border-radius:20px;
+    background:rgba(255,255,255,.2);
+    backdrop-filter:blur(10px);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.secret-heart:hover{
+    transform:scale(1.1);
+}
+
+#secretText{
+    color:white;
+    font-size:22px;
+    margin-top:30px;
+    min-height:100px;
+    line-height:1.8;
+}
+
+#reasonBtn{
+    margin-top:20px;
+}
