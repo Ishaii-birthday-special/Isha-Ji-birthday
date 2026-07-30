@@ -151,3 +151,59 @@ galleryBtn.onclick = () => {
     galleryScene.style.display = "block";
 
 };
+const photos = [
+    "images/1.jpg",
+    "images/2.jpg",
+    "images/3.jpg",
+    "images/4.jpg",
+    "images/5.jpg",
+    "images/6.jpg",
+    "images/7.jpg",
+    "images/8.jpg",
+    "images/9.jpg",
+    "images/10.jpg",
+    "images/11.jpg",
+    "images/12.jpg"
+];
+
+let currentPhoto = 0;
+
+const galleryImage = document.getElementById("galleryImage");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+const photoCounter = document.getElementById("photoCounter");
+
+function updatePhoto() {
+
+    galleryImage.src = photos[currentPhoto];
+    photoCounter.innerHTML = `${currentPhoto + 1} / ${photos.length}`;
+
+}
+
+nextBtn.onclick = () => {
+
+    alert("Next button clicked!");
+
+    currentPhoto++;
+
+    if (currentPhoto >= photos.length) {
+        currentPhoto = 0;
+    }
+
+    updatePhoto();
+
+};
+
+prevBtn.onclick = () => {
+
+    alert("Previous button clicked!");
+
+    currentPhoto--;
+
+    if (currentPhoto < 0) {
+        currentPhoto = photos.length - 1;
+    }
+
+    updatePhoto();
+
+};
