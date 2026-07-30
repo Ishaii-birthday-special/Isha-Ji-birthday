@@ -425,3 +425,25 @@ transform:translateY(-30px);
 #reasonBtn{
     margin-top:20px;
 }
+#reasonsScene {
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.reason-card {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(15px);
+    color: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+    max-width: 400px;
+    font-size: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+#reasonsScene h1 {
+    color: white;
+    margin-bottom: 30px;
+}

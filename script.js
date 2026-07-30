@@ -236,3 +236,14 @@ secretBtn.onclick = () => {
     secretScene.style.display = "block";
 
 };
+const reasonBtn = document.getElementById("reasonBtn");
+const reasonsScene = document.getElementById("reasonsScene");
+
+reasonBtn.onclick = () => {
+
+    secretScene.style.display = "none";
+
+    reasonsScene.classList.remove("hidden");
+    reasonsScene.style.display = "block";
+
+};
