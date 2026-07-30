@@ -54,11 +54,18 @@ unlockBtn.onclick = () => {
 
     popup.classList.add("hidden");
 
-    main.style.display="none";
+main.style.display = "none";
 
-    welcome.classList.remove("hidden");
+welcome.classList.add("show");
+welcome.style.display = "flex";
 
-    typeStory();
+document.getElementById("typingTitle").innerHTML =
+"Happy Birthday Isha Ji ❤️";
+
+document.getElementById("typingText").innerHTML =
+"Welcome to your special surprise! ✨";
+
+document.getElementById("letterBtn").classList.remove("hidden");
 
 };
 
