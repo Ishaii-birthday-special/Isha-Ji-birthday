@@ -37,12 +37,14 @@ const welcome = document.getElementById("welcomeScene");
 const title = document.getElementById("typingTitle");
 const text = document.getElementById("typingText");
 const letterBtn = document.getElementById("letterBtn");
-
 enterBtn.onclick = () => {
+
+    document.getElementById("bgMusic").play();
+
     popup.classList.remove("hidden");
     passwordInput.focus();
-};
- 
+
+}; 
 unlockBtn.onclick = () => {
 
     if(passwordInput.value !== PASSWORD){
