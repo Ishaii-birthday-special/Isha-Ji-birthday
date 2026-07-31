@@ -447,3 +447,36 @@ transform:translateY(-30px);
     color: white;
     margin-bottom: 30px;
 }
+#timelineScene {
+
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+
+}
+
+#timelineScene h1 {
+
+    color: white;
+    margin-bottom: 30px;
+    font-size: 42px;
+
+}
+
+.timeline-card {
+
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 20px;
+
+    background: rgba(255,255,255,.2);
+    backdrop-filter: blur(15px);
+
+    border-radius: 20px;
+
+    color: white;
+    font-size: 20px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+
+}

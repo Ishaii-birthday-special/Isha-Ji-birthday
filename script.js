@@ -247,3 +247,14 @@ reasonBtn.onclick = () => {
     reasonsScene.style.display = "block";
 
 };
+const timelineBtn = document.getElementById("timelineBtn");
+const timelineScene = document.getElementById("timelineScene");
+
+timelineBtn.onclick = () => {
+
+    reasonsScene.style.display = "none";
+
+    timelineScene.classList.remove("hidden");
+    timelineScene.style.display = "block";
+
+};
