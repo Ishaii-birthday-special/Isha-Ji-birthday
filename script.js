@@ -61,13 +61,7 @@ main.style.display = "none";
 welcome.classList.add("show");
 welcome.style.display = "flex";
 
-document.getElementById("typingTitle").innerHTML =
-"Happy Birthday Isha Ji ❤️";
-
-document.getElementById("typingText").innerHTML =
-"Welcome to your special surprise! ✨";
-
-document.getElementById("letterBtn").classList.remove("hidden");
+typeStory();
 
 };
 
@@ -184,7 +178,7 @@ function updatePhoto() {
 
 nextBtn.onclick = () => {
 
-    alert("Next button clicked!");
+    	
 
     currentPhoto++;
 
@@ -198,7 +192,6 @@ nextBtn.onclick = () => {
 
 prevBtn.onclick = () => {
 
-    alert("Previous button clicked!");
 
     currentPhoto--;
 
