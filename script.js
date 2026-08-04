@@ -267,7 +267,7 @@ finalBtn.onclick = () => {
 
     timelineScene.style.display = "none";
 
-    finalScene.classList.remove("hidden");
+    finalScene.style.display = "block";
     finalScene.style.display = "flex";
 
 };
