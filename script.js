@@ -266,8 +266,11 @@ const finalScene = document.getElementById("finalScene");
 finalBtn.onclick = () => {
 
     timelineScene.style.display = "none";
+galleryScene.style.display = "none";
+letterScene.style.display = "none";
+welcome.style.display = "none";
 
-    finalScene.style.display = "block";
+finalScene.classList.remove("hidden");
     finalScene.style.display = "flex";
 
 };
