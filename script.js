@@ -260,3 +260,14 @@ timelineBtn.onclick = () => {
     timelineScene.style.display = "block";
 
 };
+const finalBtn = document.getElementById("finalBtn");
+const finalScene = document.getElementById("finalScene");
+
+finalBtn.onclick = () => {
+
+    timelineScene.style.display = "none";
+
+    finalScene.classList.remove("hidden");
+    finalScene.style.display = "flex";
+
+};
