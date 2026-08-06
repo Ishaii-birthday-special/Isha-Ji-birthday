@@ -528,3 +528,6 @@ transform:translateY(-30px);
     font-family: cursive;
 
 }
+#finalScene.hidden {
+    display: none !important;
+}
